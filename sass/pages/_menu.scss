@@ -15,7 +15,13 @@
     img {
       width: 100%;
     }
+    .img--modification {
+      object-fit: cover;
+      height: 250px;
+    }
     h2 {
+      font-family: "Shrikhand", cursive;
+      font-weight: normal;
       background-color: variables.$color-grey;
       position: absolute;
       top: 46%;
@@ -26,12 +32,33 @@
       margin: 0;
       text-align: center;
     }
+    .title {
+      width: 40px;
+      padding-bottom: 10px;
+      border-bottom: solid 4px variables.$color-tertiary;
+      display: inline-flex;
+    }
     .ok1 {
       padding-top: 65px;
+      margin: 0 20px 0 20px;
     }
     .ok {
       background-color: variables.$color-white;
       border-radius: 20px;
+      padding: 5px 0 5px 5px;
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      h3 {
+        width: 100%;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      span {
+        margin: 17px 0 0 10px;
+      }
     }
   }
 }
