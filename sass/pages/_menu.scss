@@ -11,6 +11,7 @@
     margin-top: 37px;
   }*/
   section {
+    font-size: small;
     background-color: variables.$color-grey;
     img {
       width: 100%;
@@ -20,21 +21,19 @@
       height: 250px;
     }
     h2 {
+      font-size: 2em;
       font-family: "Shrikhand", cursive;
       font-weight: normal;
       background-color: variables.$color-grey;
       position: absolute;
       top: 46%;
       border-radius: 20px 20px 0 0;
-      width: 100%;
       height: 7%;
-      padding: 20px 0 20px 20px;
+      padding: 20px 37px 20px 20px;
       margin: 0;
-      text-align: center;
       display: flex;
-      justify-content: start;
       i {
-        margin-left: 65px;
+        margin-left: 44px;
       }
     }
     .title {
@@ -50,19 +49,23 @@
     .ok {
       background-color: variables.$color-white;
       border-radius: 20px;
-      padding: 5px 0 5px 5px;
+      padding: 10px 0 10px 10px;
       margin-top: 15px;
       display: flex;
       flex-wrap: wrap;
       h3 {
+        font-weight: bold;
         width: 100%;
         margin: 0;
       }
       p {
+        width: 73%;
         margin: 0;
       }
       span {
-        margin: 17px 0 0 10px;
+        font-weight: bold;
+        position: relative;
+        left: 15%;
       }
     }
   }
