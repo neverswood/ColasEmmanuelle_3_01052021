@@ -21,7 +21,7 @@
       object-fit: cover;
       height: 250px;
     }
-    .menu-title {
+    .restaurant_name {
       display: flex;
       justify-content: space-between;
       background-color: variables.$color-grey;
@@ -47,30 +47,31 @@
       border-bottom: solid 4px variables.$color-tertiary;
       display: inline-flex;
     }
-    .ok1 {
-      padding-top: 65px;
+    .menu {
+      padding-top: 40px;
       margin: 0 20px 0 20px;
-    }
-    .ok {
-      background-color: variables.$color-white;
-      border-radius: 20px;
-      padding: 10px 0 10px 10px;
-      margin-top: 15px;
-      display: flex;
-      flex-wrap: wrap;
-      h3 {
-        font-weight: bold;
-        width: 100%;
-        margin: 0;
-      }
-      p {
-        width: 73%;
-        margin: 0;
-      }
-      span {
-        font-weight: bold;
-        position: relative;
-        left: 15%;
+      &_details {
+        background-color: variables.$color-white;
+        border-radius: 15px;
+        padding: 12px 3px 12px 12px;
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        h3 {
+          font-weight: bold;
+          width: 100%;
+          margin: 0;
+          padding-bottom: 4px;
+        }
+        p {
+          width: 73%;
+          margin: 0;
+        }
+        span {
+          font-weight: bold;
+          position: relative;
+          left: 15%;
+        }
       }
     }
   }
