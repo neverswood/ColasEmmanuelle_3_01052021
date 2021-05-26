@@ -1,5 +1,103 @@
 @use "../utils/variables";
 
+.loader {
+  text-align: center;
+  //padding-top: 300px;
+  z-index: 100;
+  //justify-content: center;
+  //align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: variables.$color-tertiary;
+  //display: flex;
+  //height: 10vmin;
+  //left: 50%;
+  position: fixed;
+  /*top: 0;
+  left: 0;
+  margin: 0;*/
+  //margin: -5vmin 0 0 -5vmin;
+  ///position: fixed;
+  ///top: 50%;
+  // width: 10vmin;
+  animation: hidden-home 2s forwards;
+  span {
+    color: variables.$color-black;
+    font-size: xx-large;
+  }
+  &:before {
+    animation: blueRoute 4s linear infinite;
+    background-color: variables.$color-primary;
+    content: "";
+    height: 5vmin;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 5vmin;
+  }
+  &:after {
+    animation: pinkRoute 4s linear infinite;
+    background-color: variables.$color-secondary;
+    content: "";
+    height: 5vmin;
+    left: 5vmin;
+    opacity: 0.5;
+    position: absolute;
+    top: 5vmin;
+    width: 5vmin;
+  }
+}
+
+@keyframes hidden-home {
+  0% {
+    z-index: 100;
+  }
+  99% {
+    z-index: 100;
+  }
+  100% {
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+
+@keyframes blueRoute {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(5vmin, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(5vmin, 5vmin) rotate(180deg);
+  }
+  75% {
+    transform: translate(0, 5vmin) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes pinkRoute {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5vmin, 0);
+  }
+  50% {
+    transform: translate(-5vmin, -5vmin);
+  }
+  75% {
+    transform: translate(0, -5vmin);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .home {
   .header {
     text-align: center;
@@ -15,7 +113,7 @@
       margin-right: 10px;
     }
   }
-  &_presentation {
+  .home_presentation {
     background-color: variables.$color-grey;
     h2 {
       margin: 30px 50px 0 50px;
@@ -38,7 +136,7 @@
     }
   }
 
-  &_operation {
+  .home_operation {
     //display: flex;
     flex-direction: column;
     //align-items: center;
