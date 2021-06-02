@@ -1,6 +1,6 @@
 @use "../utils/variables";
 
-.menu_àlafrançaise {
+.menu_card {
   display: flex;
   section {
     font-size: small;
@@ -8,10 +8,6 @@
     padding-bottom: 40px;
     img {
       width: 100%;
-    }
-    .img--modification {
-      object-fit: cover;
-      height: 250px;
     }
     .restaurant_name {
       display: flex;
@@ -28,57 +24,54 @@
         padding: 20px 40px 20px 20px;
         margin: 0;
       }
-      /*.btn-heart {
+      .btn-heart {
         margin: 29px 40px 0 0;
+        position: absolute;
+        right: 10px;
         border: transparent;
-        font-size: 22px;
-        background-color: variables.$color-white;
-        transition: background-color 1s;
-        .btn-heart:hover {
-          background-color: linear-gradient(
-            //to bottom,
-            variables.$color-secondary,
-            variables.$color-primary
-          );
-        }
-      }*/
+      }
     }
-  }
-  .title {
-    width: 40px;
-    padding-bottom: 10px;
-    border-bottom: solid 4px variables.$color-tertiary;
-    display: inline-flex;
-  }
-  .menu {
-    margin: 0 20px 40px 20px;
-    &_details {
-      background-color: variables.$color-white;
-      border-radius: 15px;
-      padding: 12px 3px 12px 12px;
-      margin-top: 15px;
-      display: flex;
-      flex-wrap: wrap;
-      h3 {
-        font-weight: bold;
-        width: 100%;
-        margin: 0;
-        padding-bottom: 4px;
+    .menu {
+      margin: 0 20px 0 20px;
+      padding-top: 50px;
+      .title {
+        width: 40px;
+        padding-bottom: 10px;
+        border-bottom: solid 4px variables.$color-tertiary;
+        display: inline-flex;
       }
-      p {
-        width: 73%;
-        margin: 0;
-      }
-      span {
-        font-weight: bold;
-        position: relative;
-        left: 15%;
+      .menu__details {
+        background-color: variables.$color-white;
+        border-radius: 15px;
+        padding: 12px 3px 12px 12px;
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        h3 {
+          font-weight: bold;
+          width: 100%;
+          margin: 0;
+          padding-bottom: 4px;
+        }
+        p {
+          width: 73%;
+          margin: 0;
+        }
+        span {
+          font-weight: bold;
+          position: relative;
+          left: 15%;
+        }
       }
     }
   }
   .btn-command {
     display: block;
     margin: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-right: auto;
     border-radius: 20px;
     padding: 10px 35px 10px 35px;
   }

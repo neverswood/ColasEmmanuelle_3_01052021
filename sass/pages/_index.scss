@@ -1,51 +1,40 @@
 @use "../utils/variables";
 
 .loader {
-  text-align: center;
-  //padding-top: 300px;
+  padding-top: 300px;
   z-index: 100;
-  //justify-content: center;
-  //align-items: center;
   width: 100%;
   height: 100%;
   background-color: variables.$color-tertiary;
-  //display: flex;
-  //height: 10vmin;
-  //left: 50%;
   position: fixed;
-  /*top: 0;
-  left: 0;
-  margin: 0;*/
-  //margin: -5vmin 0 0 -5vmin;
-  ///position: fixed;
-  ///top: 50%;
-  // width: 10vmin;
-  animation: hidden-home 2s forwards;
-  span {
+  animation: hidden-home 4s forwards;
+  p {
     color: variables.$color-black;
-    font-size: xx-large;
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Shrikhand", cursive;
+    opacity: 0.5;
   }
   &:before {
-    animation: blueRoute 4s linear infinite;
+    animation: violetCube 4s linear infinite;
     background-color: variables.$color-primary;
     content: "";
-    height: 5vmin;
-    left: 0;
-    opacity: 0.5;
+    height: 40px;
     position: absolute;
-    top: 0;
-    width: 5vmin;
+    left: 50%;
+    width: 40px;
   }
   &:after {
-    animation: pinkRoute 4s linear infinite;
+    animation: pinkCube 4s linear infinite;
     background-color: variables.$color-secondary;
     content: "";
-    height: 5vmin;
-    left: 5vmin;
-    opacity: 0.5;
+    height: 35px;
     position: absolute;
-    top: 5vmin;
-    width: 5vmin;
+    left: 50%;
+    width: 35px;
   }
 }
 
@@ -62,7 +51,7 @@
   }
 }
 
-@keyframes blueRoute {
+@keyframes violetCube {
   0% {
     transform: translate(0, 0) rotate(0);
   }
@@ -80,7 +69,7 @@
   }
 }
 
-@keyframes pinkRoute {
+@keyframes pinkCube {
   0% {
     transform: translate(0, 0);
   }
@@ -140,7 +129,7 @@
     //display: flex;
     flex-direction: column;
     //align-items: center;
-    margin-left: 30px;
+    margin: 0 30px 0 30px;
     h2 {
       margin-top: 50px;
     }
@@ -157,7 +146,6 @@
       p {
         font-weight: bold;
         box-shadow: 1px 1px 12px #d8d5d5;
-        width: 80%;
         border-radius: 10px;
         align-items: center;
         text-align: center;
@@ -194,6 +182,7 @@
       li {
         margin-bottom: 20px;
         width: auto;
+
         p {
           color: darken(variables.$color-tertiary, 35%);
           background-color: variables.$color-tertiary;
@@ -204,6 +193,18 @@
           position: absolute;
           left: 65%;
           width: 90px;
+        }
+        .btn-heart {
+          margin: 20px 40px 0 0;
+          position: absolute;
+          right: 35px;
+          border: transparent;
+          .fa-heart {
+            color: transparent;
+          }
+          .full {
+            color: transparent;
+          }
         }
         .one {
           display: flex;
@@ -228,11 +229,8 @@
             span {
               margin: 0 0 0 10px;
             }
-            .four {
-              padding: 5%;
-              i {
-                font-size: 25px;
-              }
+            i {
+              font-size: 25px;
             }
           }
         }
