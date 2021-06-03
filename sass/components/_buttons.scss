@@ -30,3 +30,24 @@
   }
 }
 //Pour me permettre que mon icone coeur soit rempli à l'intérieur
+
+.btn {
+  border-radius: 20px;
+  background: linear-gradient(
+    to bottom,
+    variables.$color-secondary,
+    variables.$color-primary
+  );
+  box-shadow: 0 4px 7px #8f8e8e;
+  border: transparent;
+  color: variables.$color-white;
+  &:hover {
+    //opacity: 0.7;
+    background: linear-gradient(
+      to bottom,
+      lighten(variables.$color-secondary, 5%),
+      lighten(variables.$color-primary, 5%)
+    );
+    box-shadow: 0 4px 7px darken(#8f8e8e, 30%);
+  }
+}
