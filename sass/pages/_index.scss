@@ -88,8 +88,8 @@
   }
 }
 
-.home {
-  .header {
+.restaurants {
+  .top-content {
     text-align: center;
     background-color: #e6e6e6;
     border-top: solid 3px #d1d1d1;
@@ -103,7 +103,7 @@
       margin-right: 10px;
     }
   }
-  .home_presentation {
+  &__presentation {
     background-color: variables.$color-grey;
     h2 {
       margin: 30px 50px 0 50px;
@@ -118,108 +118,125 @@
     }
   }
 
-  .home_operation {
+  &__operation {
     flex-direction: column;
     margin: 0 30px 0 30px;
     @include mixin.media-queries {
-      text-align: center;
     }
     h2 {
       margin-top: 50px;
-    }
-    &_step {
-      display: flex;
-      flex-direction: column;
       @include mixin.media-queries {
-        width: 390px;
+        text-align: center;
+      }
+    }
+    &__list {
+      padding: 0;
+      @include mixin.media-queries {
         align-items: center;
-        margin: 0;
+        margin: 0 30rem;
       }
-      &--modified {
-        background-color: lighten(variables.$color-primary, 35%);
-        margin-bottom: 60px;
-      }
-      &--normal {
+      &__item {
         background-color: variables.$color-grey;
-      }
-      p {
         font-weight: bold;
         box-shadow: 1px 1px 12px #d8d5d5;
         border-radius: 10px;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
+        padding: 20px 0px;
+        margin-top: 27px;
+        &--modified {
+          background-color: lighten(variables.$color-primary, 35%);
+          margin-bottom: 60px;
+        }
         span {
-          padding: 3px;
+          padding: 3px 9px;
           background-color: variables.$color-primary;
           color: variables.$color-white;
           border-radius: 50%;
-          width: 20px;
           position: relative;
-          right: 32px;
+          right: 12px;
         }
         i {
           font-size: 20px;
           color: grey;
           margin-right: 20px;
+          margin: 0 20px 0 12px;
         }
       }
     }
   }
-  .restaurant {
+
+  &__section {
     background-color: variables.$color-grey;
     flex-direction: column;
     width: 100%;
     h2 {
       margin: 50px 0 0 22px;
+      @include mixin.media-queries {
+        margin: 50px 0 50px 22px;
+        text-align: center;
+      }
     }
-    ul {
+    &__card {
       width: auto;
       padding: 20px;
       margin: 0;
       justify-content: center;
-      li {
+      @include mixin.media-queries {
+        flex-wrap: wrap;
+        display: grid;
+        grid-row-gap: 30px; /* espace entre les lignes*/
+        grid-column-gap: 135px;
+        grid-template-areas:
+          "one two"
+          "three four";
+      }
+      &__list {
         margin-bottom: 20px;
         width: auto;
-
+        @include mixin.media-queries {
+          width: 450px;
+        }
         p {
           color: darken(variables.$color-tertiary, 35%);
           background-color: variables.$color-tertiary;
-          padding-top: 8px;
-          padding-bottom: 10px;
           justify-content: center;
           font-weight: bold;
           position: absolute;
-          left: 65%;
-          width: 90px;
-        }
-        .btn-heart {
-          margin: 20px 40px 0 0;
-          position: absolute;
-          right: 35px;
-          border: transparent;
-          .fa-heart {
-            color: transparent;
-          }
-          .full {
-            color: transparent;
+          right: 40px;
+          padding: 10px;
+          @include mixin.media-queries {
+            position: relative;
+            top: 80px;
+            left: 275px;
+            width: 120px;
           }
         }
-        .one {
+        img {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          width: 100%;
+          height: 210px;
+          object-fit: cover;
+        }
+        &__item {
           display: flex;
           flex-direction: column;
           padding-bottom: 10px;
           background-color: variables.$color-white;
           border-radius: 20px;
           box-shadow: 1px 1px 12px #d8d5d5;
-          img {
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
+          &--1 {
+            grid-area: one;
           }
-          .two {
+          &--2 {
+            grid-area: two;
+          }
+          &--3 {
+            grid-area: three;
+          }
+          &--4 {
+            grid-area: four;
+          }
+          &__bottom {
             display: flex;
             justify-content: space-between;
             h3 {
@@ -230,6 +247,21 @@
             }
             i {
               font-size: 25px;
+            }
+            .btn-heart {
+              margin: 20px 40px 0 0;
+              position: absolute;
+              right: 35px;
+              border: transparent;
+              @include mixin.media-queries {
+                position: relative;
+              }
+              .fa-heart {
+                color: transparent;
+              }
+              .full {
+                color: transparent;
+              }
             }
           }
         }

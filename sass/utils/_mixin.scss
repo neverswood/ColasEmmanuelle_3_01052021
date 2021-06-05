@@ -1,5 +1,11 @@
 @mixin media-queries {
-  @media (min-width: 1024px) {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin media-queries-1024px {
+  @media (min-width: 1400px) {
     @content;
   }
 }
