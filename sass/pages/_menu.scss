@@ -13,11 +13,11 @@
 
 .card {
   display: flex;
-  section {
+  &__section {
     font-size: small;
     background-color: variables.$color-grey;
     padding-bottom: 40px;
-    .top-pageMenu {
+    &__top {
       position: relative;
       width: 100%;
       img {
@@ -25,7 +25,7 @@
         height: 100%;
         object-fit: cover;
       }
-      .restaurant__name {
+      &__name {
         display: flex;
         justify-content: space-between;
         background-color: variables.$color-grey;
@@ -44,20 +44,20 @@
           margin: 29px 40px 0 0;
           position: absolute;
           right: 10px;
-          border: transparent;
+          border: variables.$color-transparent;
         }
       }
     }
-    .menu {
+    &__menu {
       margin: 0 20px 0 20px;
       padding-bottom: 35px;
-      .title {
+      &__title {
         width: 40px;
         padding-bottom: 10px;
         border-bottom: solid 4px variables.$color-tertiary;
         display: inline-flex;
       }
-      .menu__details {
+      &__details {
         background-color: variables.$color-white;
         border-radius: 15px;
         padding: 0 3px 12px 12px;
@@ -105,7 +105,7 @@
         span {
           font-weight: bold;
           position: relative;
-          left: 15%;
+          left: 50px;
         }
         i {
           opacity: 0;
