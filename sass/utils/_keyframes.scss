@@ -1,0 +1,80 @@
+@keyframes hidden-home {
+  0% {
+    z-index: 100;
+  }
+  99% {
+    z-index: 100;
+  }
+  100% {
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+
+@keyframes violetCube {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(5vmin, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(5vmin, 5vmin) rotate(180deg);
+  }
+  75% {
+    transform: translate(0, 5vmin) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes pinkCube {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(-5vmin, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(-5vmin, -5vmin) rotate(180deg);
+  }
+  75% {
+    transform: translate(0, -5vmin) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes molten {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appearance {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+
+@keyframes rotateDelay {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

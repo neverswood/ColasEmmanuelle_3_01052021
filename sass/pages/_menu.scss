@@ -1,15 +1,5 @@
 @use "../utils/variables";
-
-@keyframes molten {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+@use "../utils/keyframes";
 
 .card {
   display: flex;
@@ -67,28 +57,24 @@
         animation: molten 1s linear;
         animation-delay: 0.1s;
         &:hover {
+          overflow: hidden;
           cursor: pointer;
-          & > .menu__details__animation {
+          & > .card__section__menu__details__animation {
             right: 20px;
             position: absolute;
             background: variables.$color-tertiary;
             height: 60px;
             border-radius: 0 15px 15px 0;
-            animation: appearance 2s 700ms normal ease-out forwards;
-            animation-delay: 400ms, 0;
+            animation: appearance 0.4s ease-out forwards;
+            overflow: hidden;
 
             i {
               font-size: 22px;
               opacity: 1;
               color: variables.$color-white;
-              margin: auto;
-            }
-            & > i {
+              margin: 20px 0 0 20px;
               transform: rotate(1turn);
-              transition: transform 700ms ease-in-out;
-
-              //transition-delay: 600ms;
-              //animation: rotateDelay;
+              transition: transform 700ms ease-in-out 0.2s;
             }
           }
         }
@@ -99,13 +85,13 @@
           padding: 10px 0 4px 0;
         }
         p {
-          width: 73%;
+          width: 246px;
           margin: 0;
         }
         span {
           font-weight: bold;
           position: relative;
-          left: 50px;
+          left: 40px;
         }
         i {
           opacity: 0;
@@ -117,26 +103,5 @@
     display: block;
     margin: auto;
     padding: 10px 35px 10px 35px;
-  }
-}
-
-@keyframes appearance {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 50px;
-  }
-}
-
-@keyframes rotateDelay {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
   }
 }
