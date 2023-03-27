@@ -1,8 +1,8 @@
 {
-  "name": "nouveau-dossier",
+  "name": "ohmyfood",
   "version": "1.0.0",
   "description": "test",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/index.css --style compressed",
     "prefix": "postcss ./public/css/index.css --use autoprefixer -d ./public/css/prefixed/"
